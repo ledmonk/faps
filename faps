@@ -49,6 +49,9 @@ buzznouns=( \
 	"action plans" \
 	"scrum planning" \
 	"technical debt" \
+	"data lake" \
+	"server-less infrastructure" \
+	"the cloud" \
 )
 
 # these should really tie the room together
@@ -64,6 +67,7 @@ buzzadjectives=( \
 	"decrease technical debt" \
 	"generate tps reports" \
 	"increase optics" \
+	"raise the bar" \
 )	
 
 # Randomizes the selection of your buzz words
