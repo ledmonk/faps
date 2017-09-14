@@ -1,12 +1,14 @@
 #!/bin/bash
 
 # Welcome to the Fully Automated Paradigm Shifter! (FAPS)
-# This script was designed to send email motivation to your team. Or spam your
+# This script was designed to send motivation to your team. Or spam your
 # enemies. Whatever.
+
+# This section wil set up your mailx parameters
 
 # Who are you sending this to? Note the differences in spacing. The first emails
 # are being BCC'd with the -b option in the mail command where as the final
-# email address is a throw away. mail x needs one visible account to send with a
+# email address is a throw away. mail x needs one visable account to send with a
 # bcc. choose wisely
 distro='bcc1@.com,bcc2@.com, admin@faps.com'
 
@@ -30,7 +32,7 @@ buzzverbs=( \
 )
 
 
-# can probably be duplicated from any other section. 
+# can probably be duplicated
 buzznouns=( \
         "synergy" \
         "shiftiing the paradigm" \
@@ -65,9 +67,8 @@ buzzadjectives=( \
 )	
 
 # Randomizes the selection of your buzz words
-# if you want to really dial up the synergy or  spam your enemies, add in the while loop and set the sleep timer as desired 
-# If you want to clog up a email relay add the while loop but disable the sleep timer. It's your lawsuit, pal.
 
+# if you want to spam your enemies, add in the while loop. 
 #while [ 1 ]
 #do 
 noun=${buzznouns[ $((RANDOM % ${#buzznouns[@]} )) ]}
@@ -76,7 +77,7 @@ adjective=${buzzadjectives[ $((RANDOM % ${#buzzadjectives[@]} )) ]}
 
 
 echo -e "Today I $verb $noun to $adjective \n\n\n sent via FAPS" | /bin/mailx -r $from -s "$subject" -b $distro 
-
+# if you want to clog up a email relay, uncomment the while loop AND the sleep timer
 #sleep 10
 #done
 
