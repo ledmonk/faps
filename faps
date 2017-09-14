@@ -27,6 +27,7 @@ buzzverbs=( \
 	"increased" \
 	"encouraged" \
 	"road mapped" \
+	"tabled" \
 )
 
 
@@ -62,6 +63,7 @@ buzzadjectives=( \
 	"leverage agile thought" \
 	"decrease technical debt" \
 	"generate tps reports" \
+	"increase optics" \
 )	
 
 # Randomizes the selection of your buzz words
