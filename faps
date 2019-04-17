@@ -33,17 +33,17 @@ buzzverbs=( \
 
 # can probably be duplicated from any other section. 
 buzznouns=( \
-        "synergy" \
-        "shiftiing the paradigm" \
-        "deep dives" \
+    "synergy" \
+    "shiftiing the paradigm" \
+    "deep dives" \
 	"deep diving" \
-        "core competency" \
-        "incentivization" \
-        "the bleeding edge" \
-        "my deliverables" \
-        "action items" \
-        "drilling down" \
-        "low hanging fruit" \
+    "core competency" \
+    "incentivization" \
+    "the bleeding edge" \
+    "my deliverables" \
+    "action items" \
+    "drilling down" \
+    "low hanging fruit" \
 	"thought leadership" \
 	"cross team synergies" \
 	"action plans" \
@@ -52,11 +52,12 @@ buzznouns=( \
 	"data lake" \
 	"server-less infrastructure" \
 	"the cloud" \
+	"kubernetes"\
 )
 
 # these should really tie the room together
 buzzadjectives=( \
-        "think outside the box" \
+    "think outside the box" \
 	"shift the paradigm" \
 	"increase bandwidth" \
 	"ideate" \
@@ -80,8 +81,11 @@ noun=${buzznouns[ $((RANDOM % ${#buzznouns[@]} )) ]}
 verb=${buzzverbs[ $((RANDOM % ${#buzzverbs[@]} )) ]}
 adjective=${buzzadjectives[ $((RANDOM % ${#buzzadjectives[@]} )) ]}
 
+# for my looping homies
+#echo -e "Today I $verb $noun to $adjective \n\n\n sent via FAPS" | /bin/mailx -r $from -s "$subject" -b $distro 
+# if you just want to run it in your terminal
+echo -e "Today I $verb $noun to $adjective"
 
-echo -e "Today I $verb $noun to $adjective \n\n\n sent via FAPS" | /bin/mailx -r $from -s "$subject" -b $distro 
 
 #sleep 10
 #done
