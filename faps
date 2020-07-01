@@ -8,12 +8,12 @@
 # are being BCC'd with the -b option in the mail command where as the final
 # email address is a throw away. mail x needs one visible account to send with a
 # bcc. choose wisely
-distro='bcc1@.com,bcc2@.com, admin@faps.com'
+#distro='bcc1@.com,bcc2@.com, admin@faps.com'
 
 # who is this coming from?
-from="admin@faps.com"
+#from="admin@faps.com"
 # subject line. duh. 
-subject="Daily Synergy"
+#subject="Daily Synergy"
 
 
 # Variables for building of buzz sentences 
@@ -28,13 +28,15 @@ buzzverbs=( \
 	"encouraged" \
 	"road mapped" \
 	"tabled" \
+	"double-clicked"\
+	"pulled on the thread of"
 )
 
 
 # can probably be duplicated from any other section. 
 buzznouns=( \
     "synergy" \
-    "shiftiing the paradigm" \
+    "shifting the paradigm" \
     "deep dives" \
 	"deep diving" \
     "core competency" \
@@ -75,8 +77,8 @@ buzzadjectives=( \
 # if you want to really dial up the synergy or  spam your enemies, add in the while loop and set the sleep timer as desired 
 # If you want to clog up a email relay add the while loop but disable the sleep timer. It's your lawsuit, pal.
 
-#while [ 1 ]
-#do 
+while [ 1 ]
+do 
 noun=${buzznouns[ $((RANDOM % ${#buzznouns[@]} )) ]}
 verb=${buzzverbs[ $((RANDOM % ${#buzzverbs[@]} )) ]}
 adjective=${buzzadjectives[ $((RANDOM % ${#buzzadjectives[@]} )) ]}
@@ -87,6 +89,6 @@ adjective=${buzzadjectives[ $((RANDOM % ${#buzzadjectives[@]} )) ]}
 echo -e "Today I $verb $noun to $adjective"
 
 
-#sleep 10
-#done
+sleep 1
+done
 
